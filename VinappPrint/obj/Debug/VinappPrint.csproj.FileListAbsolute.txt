@@ -15,3 +15,23 @@ C:\Users\Usuario\documents\visual studio 2015\Projects\VinappPrint\VinappPrint\b
 C:\Users\Usuario\documents\visual studio 2015\Projects\VinappPrint\VinappPrint\obj\Debug\VinappPrint.Main.resources
 C:\Users\Usuario\documents\visual studio 2015\Projects\VinappPrint\VinappPrint\obj\Debug\VinappPrint.Properties.Resources.resources
 C:\Users\Usuario\documents\visual studio 2015\Projects\VinappPrint\VinappPrint\bin\Debug\Guna.UI2.dll
+C:\Users\amari\OneDrive\Escritorio\VinappPrint\VinappPrint\bin\Debug\VinappPrint.exe.config
+C:\Users\amari\OneDrive\Escritorio\VinappPrint\VinappPrint\bin\Debug\VinappPrint.exe
+C:\Users\amari\OneDrive\Escritorio\VinappPrint\VinappPrint\bin\Debug\VinappPrint.pdb
+C:\Users\amari\OneDrive\Escritorio\VinappPrint\VinappPrint\bin\Debug\EngineIoClientDotNet.dll
+C:\Users\amari\OneDrive\Escritorio\VinappPrint\VinappPrint\bin\Debug\Guna.UI2.dll
+C:\Users\amari\OneDrive\Escritorio\VinappPrint\VinappPrint\bin\Debug\Newtonsoft.Json.dll
+C:\Users\amari\OneDrive\Escritorio\VinappPrint\VinappPrint\bin\Debug\SocketIoClientDotNet.dll
+C:\Users\amari\OneDrive\Escritorio\VinappPrint\VinappPrint\bin\Debug\websocket-sharp.dll
+C:\Users\amari\OneDrive\Escritorio\VinappPrint\VinappPrint\bin\Debug\WebSocket4Net.dll
+C:\Users\amari\OneDrive\Escritorio\VinappPrint\VinappPrint\bin\Debug\Newtonsoft.Json.xml
+C:\Users\amari\OneDrive\Escritorio\VinappPrint\VinappPrint\bin\Debug\websocket-sharp.xml
+C:\Users\amari\OneDrive\Escritorio\VinappPrint\VinappPrint\obj\Debug\VinappPrint.DesingPos.resources
+C:\Users\amari\OneDrive\Escritorio\VinappPrint\VinappPrint\obj\Debug\VinappPrint.Main.resources
+C:\Users\amari\OneDrive\Escritorio\VinappPrint\VinappPrint\obj\Debug\VinappPrint.Properties.Resources.resources
+C:\Users\amari\OneDrive\Escritorio\VinappPrint\VinappPrint\obj\Debug\VinappPrint.csproj.GenerateResource.cache
+C:\Users\amari\OneDrive\Escritorio\VinappPrint\VinappPrint\obj\Debug\VinappPrint.csproj.CoreCompileInputs.cache
+C:\Users\amari\OneDrive\Escritorio\VinappPrint\VinappPrint\obj\Debug\VinappPrint.csproj.CopyComplete
+C:\Users\amari\OneDrive\Escritorio\VinappPrint\VinappPrint\obj\Debug\VinappPrint.exe
+C:\Users\amari\OneDrive\Escritorio\VinappPrint\VinappPrint\obj\Debug\VinappPrint.pdb
+C:\Users\amari\OneDrive\Escritorio\VinappPrint\VinappPrint\obj\Debug\VinappPrint.csprojAssemblyReference.cache

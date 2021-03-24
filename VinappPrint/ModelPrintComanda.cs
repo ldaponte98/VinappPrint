@@ -11,6 +11,7 @@ namespace VinappPrint
         public string NumComanda { get; set; }
         public List<Producto> Productos { get; set; } = new List<Producto>();
         public string Observaciones { get; set; }
+        public string Mesa { get; set; }
 
     }
 

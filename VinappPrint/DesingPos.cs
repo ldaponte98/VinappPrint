@@ -126,6 +126,12 @@ namespace VinappPrint
             e.Graphics.DrawString(modelPrintFactura.Domicilio, new Font(fontFamily, fontSize), Brushes.Black, new RectangleF(-25, y + 220, width, height), sf_right); 
             e.Graphics.DrawString("Descuento: ", new Font(fontFamily, fontSize, FontStyle.Bold), Brushes.Black, new RectangleF(x + 127, y + 240, width, height));
             e.Graphics.DrawString(modelPrintFactura.Descuento, new Font(fontFamily, fontSize), Brushes.Black, new RectangleF(-25, y + 240, width, height), sf_right);
+            if(modelPrintFactura.Servicio != "$0")
+            {
+                e.Graphics.DrawString("Servicio: ", new Font(fontFamily, fontSize, FontStyle.Bold), Brushes.Black, new RectangleF(x + 140, y + 260, width, height));
+                e.Graphics.DrawString(modelPrintFactura.Servicio, new Font(fontFamily, fontSize), Brushes.Black, new RectangleF(-25, y + 260, width, height), sf_right);
+                y += 20;
+            }
             e.Graphics.DrawString("Total: ", new Font(fontFamily, fontSize, FontStyle.Bold), Brushes.Black, new RectangleF(x + 160, y + 260, width, height));
             e.Graphics.DrawString(modelPrintFactura.Total, new Font(fontFamily, fontSize), Brushes.Black, new RectangleF(-25, y + 260, width, height), sf_right);
             e.Graphics.DrawString("Forma de pago: ", new Font(fontFamily, fontSize, FontStyle.Bold), Brushes.Black, new RectangleF(x + 100, y + 280, width, height));
@@ -167,8 +173,11 @@ namespace VinappPrint
             StringFormat sf = new StringFormat();
             sf.Alignment = StringAlignment.Center;
 
-            e.Graphics.DrawString("Comanda #"+modelPrintComanda.NumComanda, new Font(fontFamily, 15, FontStyle.Bold), Brushes.Black, new RectangleF(x - 10, y, width, height), sf);
-
+            e.Graphics.DrawString("Comanda #"+modelPrintComanda.NumComanda, new Font(fontFamily, 15, FontStyle.Bold), Brushes.Black, new RectangleF(x - 0, y, width, height), sf);
+            if(modelPrintComanda.Mesa != "No definida") {
+                e.Graphics.DrawString("Mesa " + modelPrintComanda.Mesa, new Font(fontFamily, 15, FontStyle.Bold), Brushes.Black, new RectangleF(x - 0, y + 25, width, height), sf);
+                y += 25;
+            }
             e.Graphics.DrawString("Cant ", new Font(fontFamily, fontSize, FontStyle.Bold), Brushes.Black, new RectangleF(x + 5, y + 50, width, height));
             e.Graphics.DrawString("Descripción ", new Font(fontFamily, fontSize, FontStyle.Bold), Brushes.Black, new RectangleF(x + 50, y + 50, width, height));
             e.Graphics.DrawString("Observaciones ", new Font(fontFamily, fontSize, FontStyle.Bold), Brushes.Black, new RectangleF(x + 160, y + 50, width, height));
@@ -178,7 +187,7 @@ namespace VinappPrint
             foreach (Producto item in modelPrintComanda.Productos)
             {
 
-                e.Graphics.DrawString(item.Cantidad, new Font(fontFamily, fontSize, FontStyle.Bold), Brushes.Black, new RectangleF(x + 15, y + 70, 10, height));
+                e.Graphics.DrawString(item.Cantidad, new Font(fontFamily, fontSize, FontStyle.Bold), Brushes.Black, new RectangleF(x + 10, y + 70, 40, height));
                 e.Graphics.DrawString(item.Nombre, new Font(fontFamily, fontSize), Brushes.Black, new RectangleF(x + 50, y + 70, 120, height));
                 e.Graphics.DrawString(item.Observaciones, new Font(fontFamily, fontSize), Brushes.Black, new RectangleF(x + 160, y + 70, 130, height));
 

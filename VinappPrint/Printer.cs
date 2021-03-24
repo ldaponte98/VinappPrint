@@ -7,6 +7,7 @@ using System.Drawing;
 using System.Xml.Linq;
 using System.Configuration;
 using Newtonsoft.Json.Linq;
+using System.Windows.Forms;
 
 namespace VinappPrint
 {
@@ -14,8 +15,13 @@ namespace VinappPrint
     {
         public static void Print(dynamic data)
         {
-            if (ConfigurationManager.AppSettings["permite_facturacion"] == "true") PrintFactura(data);
-            if (ConfigurationManager.AppSettings["permite_comanda"] == "true") PrintComanda(data);
+            if (data.type_print == "comanda") PrintComanda(data);
+            if (data.type_print == "factura") PrintFactura(data);
+            if (data.type_print == "comanda-factura" || data.type_print == null)
+            {
+                PrintFactura(data);
+                PrintComanda(data);
+            }
         }
 
         public static void PrintFactura(dynamic data)
@@ -49,6 +55,7 @@ namespace VinappPrint
            
             modelPrint.Subtotal = data.subtotal;
             modelPrint.Descuento = data.total_discount;
+            modelPrint.Servicio = data.service;
             modelPrint.Total = data.total;
             modelPrint.FormaPago = data.payment_methods;
             
@@ -59,6 +66,7 @@ namespace VinappPrint
                 desingPos.modelPrintFactura = modelPrint;
                 desingPos.impresora = impresora;
                 desingPos.Start();
+                //MessageBox.Show("Imprimiendo Factura");
             }
         }
 
@@ -66,6 +74,7 @@ namespace VinappPrint
         {
             ModelPrintComanda modelPrint = new ModelPrintComanda();
             modelPrint.NumComanda = data.comanda;
+            modelPrint.Mesa = data.table;
             foreach (dynamic item in data.details)
             {
                 modelPrint.Productos.Add(new Producto
@@ -83,7 +92,8 @@ namespace VinappPrint
                 DesingPos desingPos = new DesingPos("comanda");
                 desingPos.modelPrintComanda = modelPrint;
                 desingPos.impresora = impresora;
-                desingPos.Start();
+                desingPos.Start();  
+                
             }
             
         }

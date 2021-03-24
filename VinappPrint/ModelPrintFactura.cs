@@ -22,6 +22,7 @@ namespace VinappPrint
         public string ClienteDireccion { get; set; }
         public string Mesa { get; set; }
         public string Domicilio { get; set; }
+        public string Servicio { get; set; }
         public List<DetalleFactura> DetallesFactura { get; set; } = new List<DetalleFactura>();
         public string Subtotal { get; set; }
         public string Descuento { get; set; }

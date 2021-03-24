@@ -34,7 +34,7 @@ namespace VinappPrint
                 dynamic response = JObject.Parse(data.ToString());
                 Printer.Print(response.data);
             });
-            Console.ReadLine();
+            //Console.ReadLine();
         }
 
     }
