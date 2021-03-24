@@ -1,0 +1,17 @@
+c:\users\usuario\documents\visual studio 2015\Projects\VinappPrint\VinappPrint\bin\Debug\VinappPrint.exe.config
+C:\Users\Usuario\Documents\Visual Studio 2015\Projects\VinappPrint\VinappPrint\bin\Debug\VinappPrint.exe
+C:\Users\Usuario\Documents\Visual Studio 2015\Projects\VinappPrint\VinappPrint\bin\Debug\VinappPrint.pdb
+C:\Users\Usuario\Documents\Visual Studio 2015\Projects\VinappPrint\VinappPrint\obj\Debug\VinappPrint.exe
+C:\Users\Usuario\Documents\Visual Studio 2015\Projects\VinappPrint\VinappPrint\obj\Debug\VinappPrint.pdb
+C:\Users\Usuario\documents\visual studio 2015\Projects\VinappPrint\VinappPrint\obj\Debug\VinappPrint.DesingPos.resources
+C:\Users\Usuario\documents\visual studio 2015\Projects\VinappPrint\VinappPrint\obj\Debug\VinappPrint.csproj.GenerateResource.Cache
+C:\Users\Usuario\documents\visual studio 2015\Projects\VinappPrint\VinappPrint\bin\Debug\EngineIoClientDotNet.dll
+C:\Users\Usuario\documents\visual studio 2015\Projects\VinappPrint\VinappPrint\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Usuario\documents\visual studio 2015\Projects\VinappPrint\VinappPrint\bin\Debug\SocketIoClientDotNet.dll
+C:\Users\Usuario\documents\visual studio 2015\Projects\VinappPrint\VinappPrint\bin\Debug\websocket-sharp.dll
+C:\Users\Usuario\documents\visual studio 2015\Projects\VinappPrint\VinappPrint\bin\Debug\WebSocket4Net.dll
+C:\Users\Usuario\documents\visual studio 2015\Projects\VinappPrint\VinappPrint\bin\Debug\Newtonsoft.Json.xml
+C:\Users\Usuario\documents\visual studio 2015\Projects\VinappPrint\VinappPrint\bin\Debug\websocket-sharp.xml
+C:\Users\Usuario\documents\visual studio 2015\Projects\VinappPrint\VinappPrint\obj\Debug\VinappPrint.Main.resources
+C:\Users\Usuario\documents\visual studio 2015\Projects\VinappPrint\VinappPrint\obj\Debug\VinappPrint.Properties.Resources.resources
+C:\Users\Usuario\documents\visual studio 2015\Projects\VinappPrint\VinappPrint\bin\Debug\Guna.UI2.dll
