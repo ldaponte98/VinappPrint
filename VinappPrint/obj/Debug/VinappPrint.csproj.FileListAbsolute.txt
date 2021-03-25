@@ -46,7 +46,6 @@ C:\Users\luisc\Desktop\DATOS\VinappPrint\VinappPrint\bin\Debug\websocket-sharp.d
 C:\Users\luisc\Desktop\DATOS\VinappPrint\VinappPrint\bin\Debug\WebSocket4Net.dll
 C:\Users\luisc\Desktop\DATOS\VinappPrint\VinappPrint\bin\Debug\Newtonsoft.Json.xml
 C:\Users\luisc\Desktop\DATOS\VinappPrint\VinappPrint\bin\Debug\websocket-sharp.xml
-C:\Users\luisc\Desktop\DATOS\VinappPrint\VinappPrint\obj\Debug\VinappPrint.csprojAssemblyReference.cache
 C:\Users\luisc\Desktop\DATOS\VinappPrint\VinappPrint\obj\Debug\VinappPrint.DesingPos.resources
 C:\Users\luisc\Desktop\DATOS\VinappPrint\VinappPrint\obj\Debug\VinappPrint.Main.resources
 C:\Users\luisc\Desktop\DATOS\VinappPrint\VinappPrint\obj\Debug\VinappPrint.Properties.Resources.resources

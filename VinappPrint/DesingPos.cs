@@ -65,7 +65,9 @@ namespace VinappPrint
             int height = int.Parse(ConfigurationManager.AppSettings["ancho"]);
             string fontFamily = "Arial";
             int fontSize = 9 + int.Parse(ConfigurationManager.AppSettings["tama_fuente"]); 
-            
+
+            int x_detalles = int.Parse(ConfigurationManager.AppSettings["x_menos_detalles"]);
+
             Image img = Image.FromFile("C:\\Users\\" + Environment.UserName + "\\logo_vinapp.png");
             int y = 150 + int.Parse(ConfigurationManager.AppSettings["espaciado_logo"]);
             int x = int.Parse(ConfigurationManager.AppSettings["espaciado_x"]);
@@ -104,42 +106,44 @@ namespace VinappPrint
             e.Graphics.DrawString(modelPrintFactura.ClienteDireccion, new Font(fontFamily, fontSize), Brushes.Black, new RectangleF(x + 74, y + 170, width, height));
 
             e.Graphics.DrawString("Descripción ", new Font(fontFamily, fontSize, FontStyle.Bold), Brushes.Black, new RectangleF(x + 10, y + 200, width, height));
-            e.Graphics.DrawString("Cant ", new Font(fontFamily, fontSize, FontStyle.Bold), Brushes.Black, new RectangleF(x + 170, y + 200, width, height));
-            e.Graphics.DrawString("Valor ", new Font(fontFamily, fontSize, FontStyle.Bold), Brushes.Black, new RectangleF(x + 235, y + 200, width, height));
+            e.Graphics.DrawString("Cant ", new Font(fontFamily, fontSize, FontStyle.Bold), Brushes.Black, new RectangleF(x + 170 - x_detalles, y + 200, width, height));
+            e.Graphics.DrawString("Valor ", new Font(fontFamily, fontSize, FontStyle.Bold), Brushes.Black, new RectangleF(x + 235 - x_detalles, y + 200, width, height));
 
             y += 20;
             StringFormat sf_right = new StringFormat();
             sf_right.Alignment = StringAlignment.Far;
+
+
             foreach (DetalleFactura item in modelPrintFactura.DetallesFactura)
             {
                 
-                e.Graphics.DrawString(item.Descripcion, new Font(fontFamily, fontSize), Brushes.Black, new RectangleF(x + 10, y + 200, 150, height));
-                e.Graphics.DrawString(item.Cantidad, new Font(fontFamily, fontSize), Brushes.Black, new RectangleF(x + 180, y + 200, width, height));
-                e.Graphics.DrawString(item.Valor, new Font(fontFamily, fontSize), Brushes.Black, new RectangleF(-25, y + 200, width, height), sf_right);
+                e.Graphics.DrawString(item.Descripcion, new Font(fontFamily, fontSize), Brushes.Black, new RectangleF(x + 10, y + 200, 150 - x_detalles, height));
+                e.Graphics.DrawString(item.Cantidad, new Font(fontFamily, fontSize), Brushes.Black, new RectangleF(x + 180 - x_detalles, y + 200, width, height));
+                e.Graphics.DrawString(item.Valor, new Font(fontFamily, fontSize), Brushes.Black, new RectangleF(-25 - x_detalles, y + 200, width, height), sf_right);
 
                 y += this.GetYByHeigth(item.Descripcion);
             }
-            e.Graphics.DrawString("Subtotal: ", new Font(fontFamily, fontSize, FontStyle.Bold), Brushes.Black, new RectangleF(x + 140, y + 220, width, height));
-            e.Graphics.DrawString(modelPrintFactura.Subtotal, new Font(fontFamily, fontSize), Brushes.Black, new RectangleF(-25, y + 220, width, height), sf_right);
+            e.Graphics.DrawString("Subtotal: ", new Font(fontFamily, fontSize, FontStyle.Bold), Brushes.Black, new RectangleF(x + 140 - x_detalles, y + 220, width, height));
+            e.Graphics.DrawString(modelPrintFactura.Subtotal, new Font(fontFamily, fontSize), Brushes.Black, new RectangleF(-25 - x_detalles, y + 220, width, height), sf_right);
             y += 20;
-            e.Graphics.DrawString("Domicilio: ", new Font(fontFamily, fontSize, FontStyle.Bold), Brushes.Black, new RectangleF(x + 135, y + 220, width, height));
-            e.Graphics.DrawString(modelPrintFactura.Domicilio, new Font(fontFamily, fontSize), Brushes.Black, new RectangleF(-25, y + 220, width, height), sf_right); 
-            e.Graphics.DrawString("Descuento: ", new Font(fontFamily, fontSize, FontStyle.Bold), Brushes.Black, new RectangleF(x + 127, y + 240, width, height));
-            e.Graphics.DrawString(modelPrintFactura.Descuento, new Font(fontFamily, fontSize), Brushes.Black, new RectangleF(-25, y + 240, width, height), sf_right);
+            e.Graphics.DrawString("Domicilio: ", new Font(fontFamily, fontSize, FontStyle.Bold), Brushes.Black, new RectangleF(x + 135 - x_detalles, y + 220, width, height));
+            e.Graphics.DrawString(modelPrintFactura.Domicilio, new Font(fontFamily, fontSize), Brushes.Black, new RectangleF(-25 - x_detalles, y + 220, width, height), sf_right); 
+            e.Graphics.DrawString("Descuento: ", new Font(fontFamily, fontSize, FontStyle.Bold), Brushes.Black, new RectangleF(x + 127 - x_detalles, y + 240, width, height));
+            e.Graphics.DrawString(modelPrintFactura.Descuento, new Font(fontFamily, fontSize), Brushes.Black, new RectangleF(-25 - x_detalles, y + 240, width, height), sf_right);
             if(modelPrintFactura.Servicio != "$0")
             {
-                e.Graphics.DrawString("Servicio: ", new Font(fontFamily, fontSize, FontStyle.Bold), Brushes.Black, new RectangleF(x + 140, y + 260, width, height));
-                e.Graphics.DrawString(modelPrintFactura.Servicio, new Font(fontFamily, fontSize), Brushes.Black, new RectangleF(-25, y + 260, width, height), sf_right);
+                e.Graphics.DrawString("Servicio: ", new Font(fontFamily, fontSize, FontStyle.Bold), Brushes.Black, new RectangleF(x + 140 - x_detalles, y + 260, width, height));
+                e.Graphics.DrawString(modelPrintFactura.Servicio, new Font(fontFamily, fontSize), Brushes.Black, new RectangleF(-25 - x_detalles, y + 260, width, height), sf_right);
                 y += 20;
             }
-            e.Graphics.DrawString("Total: ", new Font(fontFamily, fontSize, FontStyle.Bold), Brushes.Black, new RectangleF(x + 160, y + 260, width, height));
-            e.Graphics.DrawString(modelPrintFactura.Total, new Font(fontFamily, fontSize), Brushes.Black, new RectangleF(-25, y + 260, width, height), sf_right);
-            e.Graphics.DrawString("Forma de pago: ", new Font(fontFamily, fontSize, FontStyle.Bold), Brushes.Black, new RectangleF(x + 100, y + 280, width, height));
-            e.Graphics.DrawString(modelPrintFactura.FormaPago, new Font(fontFamily, 8.5f), Brushes.Black, new RectangleF(-25, y + 280, width, height), sf_right);
+            e.Graphics.DrawString("Total: ", new Font(fontFamily, fontSize, FontStyle.Bold), Brushes.Black, new RectangleF(x + 160 - x_detalles, y + 260, width, height));
+            e.Graphics.DrawString(modelPrintFactura.Total, new Font(fontFamily, fontSize), Brushes.Black, new RectangleF(-25 - x_detalles, y + 260, width, height), sf_right);
+            e.Graphics.DrawString("Forma de pago: ", new Font(fontFamily, fontSize, FontStyle.Bold), Brushes.Black, new RectangleF(x + 100 - x_detalles, y + 280, width, height));
+            e.Graphics.DrawString(modelPrintFactura.FormaPago, new Font(fontFamily, 8.5f), Brushes.Black, new RectangleF(-25 - x_detalles, y + 280, width, height), sf_right);
             if(modelPrintFactura.PagaCon != null && modelPrintFactura.PagaCon != "")
             {
                 e.Graphics.DrawString("Paga con: ", new Font(fontFamily, fontSize, FontStyle.Bold), Brushes.Black, new RectangleF(x + 140, y + 300, width, height));
-                e.Graphics.DrawString(modelPrintFactura.PagaCon, new Font(fontFamily, 8.5f), Brushes.Black, new RectangleF(-25, y + 300, width, height), sf_right);
+                e.Graphics.DrawString(modelPrintFactura.PagaCon, new Font(fontFamily, 8.5f), Brushes.Black, new RectangleF(-25 - x_detalles, y + 300, width, height), sf_right);
                 y += 20;
             }
             StringFormat sf = new StringFormat();

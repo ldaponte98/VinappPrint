@@ -54,3 +54,4 @@ C:\Users\luisc\Desktop\DATOS\VinappPrint\VinappPrint\obj\Release\VinappPrint.csp
 C:\Users\luisc\Desktop\DATOS\VinappPrint\VinappPrint\obj\Release\VinappPrint.csproj.CopyComplete
 C:\Users\luisc\Desktop\DATOS\VinappPrint\VinappPrint\obj\Release\VinappPrint.exe
 C:\Users\luisc\Desktop\DATOS\VinappPrint\VinappPrint\obj\Release\VinappPrint.pdb
+C:\Users\luisc\Desktop\DATOS\VinappPrint\VinappPrint\obj\Release\VinappPrint.csprojAssemblyReference.cache
