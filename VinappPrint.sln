@@ -1,11 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 14
-VisualStudioVersion = 14.0.25420.1
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31112.23
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VinappPrint", "VinappPrint\VinappPrint.csproj", "{8101224B-DE57-4B22-BBD3-77C0FFDC8785}"
 EndProject
-Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "VinappInstaller", "VinappInstaller\VinappInstaller.vdproj", "{260B8348-A3BD-40B9-9D24-DCCD8F51AE2E}"
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "VinappInstaller", "VinappInstaller\VinappInstaller.vdproj", "{E7EE1DE4-8273-4F2C-96C9-203C3E33D316}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -17,10 +17,13 @@ Global
 		{8101224B-DE57-4B22-BBD3-77C0FFDC8785}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8101224B-DE57-4B22-BBD3-77C0FFDC8785}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8101224B-DE57-4B22-BBD3-77C0FFDC8785}.Release|Any CPU.Build.0 = Release|Any CPU
-		{260B8348-A3BD-40B9-9D24-DCCD8F51AE2E}.Debug|Any CPU.ActiveCfg = Debug
-		{260B8348-A3BD-40B9-9D24-DCCD8F51AE2E}.Release|Any CPU.ActiveCfg = Release
+		{E7EE1DE4-8273-4F2C-96C9-203C3E33D316}.Debug|Any CPU.ActiveCfg = Debug
+		{E7EE1DE4-8273-4F2C-96C9-203C3E33D316}.Release|Any CPU.ActiveCfg = Release
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {971C84C6-04C2-46AE-B9B6-AE0E24611E6A}
 	EndGlobalSection
 EndGlobal
