@@ -19,8 +19,17 @@ namespace VinappPrint
             if (data.type_print == "factura") PrintFactura(data);
             if (data.type_print == "comanda-factura" || data.type_print == null)
             {
-                PrintFactura(data);
-                PrintComanda(data);
+                if (ConfigurationManager.AppSettings["imprime_primero"] == "comanda")
+                {
+                    PrintComanda(data);
+                    PrintFactura(data);
+                }
+                else
+                {
+                    PrintFactura(data);
+                    PrintComanda(data);
+                }
+                
             }
         }
 
@@ -47,7 +56,7 @@ namespace VinappPrint
             {
                 modelPrint.DetallesFactura.Add(new DetalleFactura
                 {
-                    Descripcion = item.product,
+                    Descripcion = item.product_invoice,
                     Cantidad = item.quantity,
                     Valor = item.value
                 });
@@ -58,8 +67,18 @@ namespace VinappPrint
             modelPrint.Servicio = data.service;
             modelPrint.Total = data.total;
             modelPrint.FormaPago = data.payment_methods;
-            
-            string[] impresoras = ConfigurationManager.AppSettings["impresoras_facturacion"].ToString().Split(',');
+
+            string[] impresoras = "".Split();
+            if (data.type_order == "table")
+            {
+                impresoras = ConfigurationManager.AppSettings["impresoras_facturacion_mesa"].ToString().Split(',');
+            }
+            if (data.type_order == "delivery")
+            {
+                impresoras = ConfigurationManager.AppSettings["impresoras_facturacion_domicilio"].ToString().Split(',');
+            }
+
+
             foreach (string impresora in impresoras)
             {
                 DesingPos desingPos = new DesingPos("factura");
@@ -71,6 +90,7 @@ namespace VinappPrint
         }
 
         public static void PrintComanda(dynamic data)
+
         {
             ModelPrintComanda modelPrint = new ModelPrintComanda();
             modelPrint.NumComanda = data.comanda;
