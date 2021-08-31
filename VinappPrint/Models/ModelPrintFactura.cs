@@ -30,6 +30,8 @@ namespace VinappPrint
         public string FormaPago { get; set; }
         public string PagaCon { get; set; }
         public string Texto { get; set; } = "Esta factura de venta se asimila en sus efectos a la letra de cambio (ART. 621 Y 774 de C.C)";
+        public string UrlLogo { get; set; }
+        public string IdLicencia { get; set; }
     }
 
     public class DetalleFactura

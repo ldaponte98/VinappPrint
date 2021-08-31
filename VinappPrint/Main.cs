@@ -32,8 +32,7 @@ namespace VinappPrint
         public Main()
         {
             InitializeComponent();
-            FormBorderStyle = FormBorderStyle.None;
-            Region = Region.FromHrgn(CreateRoundRectRgn(0, 0, Width, Height, 20, 20));
+            
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
@@ -107,6 +106,22 @@ namespace VinappPrint
         private void panel1_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void pictureBox4_Click(object sender, EventArgs e)
+        {
+            Settings form = new Settings();
+            form.Show();
+        }
+
+        private void pictureBox6_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
         }
     }
 }

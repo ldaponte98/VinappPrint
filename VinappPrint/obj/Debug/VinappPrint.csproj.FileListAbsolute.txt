@@ -55,3 +55,26 @@ C:\Users\luisc\Desktop\DATOS\VinappPrint\VinappPrint\obj\Debug\VinappPrint.cspro
 C:\Users\luisc\Desktop\DATOS\VinappPrint\VinappPrint\obj\Debug\VinappPrint.exe
 C:\Users\luisc\Desktop\DATOS\VinappPrint\VinappPrint\obj\Debug\VinappPrint.pdb
 C:\Users\luisc\Desktop\DATOS\VinappPrint\VinappPrint\obj\Debug\VinappPrint.csprojAssemblyReference.cache
+D:\PC CLEZ\DATOS\VinappPrint\VinappPrint\bin\Debug\VinappPrint.exe.config
+D:\PC CLEZ\DATOS\VinappPrint\VinappPrint\bin\Debug\VinappPrint.exe
+D:\PC CLEZ\DATOS\VinappPrint\VinappPrint\bin\Debug\VinappPrint.pdb
+D:\PC CLEZ\DATOS\VinappPrint\VinappPrint\bin\Debug\EngineIoClientDotNet.dll
+D:\PC CLEZ\DATOS\VinappPrint\VinappPrint\bin\Debug\Guna.UI2.dll
+D:\PC CLEZ\DATOS\VinappPrint\VinappPrint\bin\Debug\Newtonsoft.Json.dll
+D:\PC CLEZ\DATOS\VinappPrint\VinappPrint\bin\Debug\SocketIoClientDotNet.dll
+D:\PC CLEZ\DATOS\VinappPrint\VinappPrint\bin\Debug\websocket-sharp.dll
+D:\PC CLEZ\DATOS\VinappPrint\VinappPrint\bin\Debug\WebSocket4Net.dll
+D:\PC CLEZ\DATOS\VinappPrint\VinappPrint\bin\Debug\Newtonsoft.Json.xml
+D:\PC CLEZ\DATOS\VinappPrint\VinappPrint\bin\Debug\websocket-sharp.xml
+D:\PC CLEZ\DATOS\VinappPrint\VinappPrint\obj\Debug\VinappPrint.csproj.AssemblyReference.cache
+D:\PC CLEZ\DATOS\VinappPrint\VinappPrint\obj\Debug\VinappPrint.DesingPos.resources
+D:\PC CLEZ\DATOS\VinappPrint\VinappPrint\obj\Debug\VinappPrint.Main.resources
+D:\PC CLEZ\DATOS\VinappPrint\VinappPrint\obj\Debug\VinappPrint.Properties.Resources.resources
+D:\PC CLEZ\DATOS\VinappPrint\VinappPrint\obj\Debug\VinappPrint.Login.resources
+D:\PC CLEZ\DATOS\VinappPrint\VinappPrint\obj\Debug\VinappPrint.csproj.GenerateResource.cache
+D:\PC CLEZ\DATOS\VinappPrint\VinappPrint\obj\Debug\VinappPrint.csproj.CoreCompileInputs.cache
+D:\PC CLEZ\DATOS\VinappPrint\VinappPrint\obj\Debug\VinappPrint.csproj.CopyComplete
+D:\PC CLEZ\DATOS\VinappPrint\VinappPrint\obj\Debug\VinappPrint.exe
+D:\PC CLEZ\DATOS\VinappPrint\VinappPrint\obj\Debug\VinappPrint.pdb
+D:\PC CLEZ\DATOS\VinappPrint\VinappPrint\obj\Debug\VinappPrint.Settings.resources
+D:\PC CLEZ\DATOS\VinappPrint\VinappPrint\obj\Debug\VinappPrint.TypeDriversPrinter.resources

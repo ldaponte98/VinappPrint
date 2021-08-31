@@ -81,14 +81,17 @@
     <Compile Include="DesingPos.Designer.cs">
       <DependentUpon>DesingPos.cs</DependentUpon>
     </Compile>
+    <Compile Include="Infraestructure\API.cs" />
+    <Compile Include="Infraestructure\LocalStorage.cs" />
     <Compile Include="Main.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Main.Designer.cs">
       <DependentUpon>Main.cs</DependentUpon>
     </Compile>
-    <Compile Include="ModelPrintFactura.cs" />
-    <Compile Include="ModelPrintComanda.cs" />
+    <Compile Include="Models\ModelPrintFactura.cs" />
+    <Compile Include="Models\ModelPrintComanda.cs" />
+    <Compile Include="Models\Point.cs" />
     <Compile Include="Printer.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -97,7 +100,25 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <Compile Include="SocketConfiguration.cs" />
+    <Compile Include="Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Infraestructure\SocketConfiguration.cs" />
+    <Compile Include="Settings.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Settings.Designer.cs">
+      <DependentUpon>Settings.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TypeDriversPrinter.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TypeDriversPrinter.Designer.cs">
+      <DependentUpon>TypeDriversPrinter.cs</DependentUpon>
+    </Compile>
     <Compile Include="Tools.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -117,6 +138,15 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <EmbeddedResource Include="Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Settings.resx">
+      <DependentUpon>Settings.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TypeDriversPrinter.resx">
+      <DependentUpon>TypeDriversPrinter.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Close_Icon.png" />
@@ -135,6 +165,15 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\printin_16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\settings.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\imgtest.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\test2.jpeg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

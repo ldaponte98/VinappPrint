@@ -8,16 +8,25 @@ using System.Net;
 using System.Net.Sockets;
 using System.Threading;
 using System.Windows.Forms;
+using VinappPrint.Infraestructure;
 
 namespace VinappPrint
-{
+{ 
     class Program
     {
+        [STAThread]
         static void Main(string[] args)
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Main());
+            if (LocalStorage.Get("Login").Equals("true"))
+            {
+                Application.Run(new Main());
+            }
+            else{
+                Application.Run(new Login());
+            }
+            
             //SocketConfiguration.Listen();
         }
     }
