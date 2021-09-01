@@ -50,7 +50,10 @@ namespace VinappPrint
             string imagen = "C:\\Users\\" + Environment.UserName + "\\logo_vinapp.png";
             if (!File.Exists(imagen))
             {
-                SaveImage(ConfigurationManager.AppSettings["url_logo"], "C:\\Users\\" + Environment.UserName + "\\logo_vinapp.png", ImageFormat.Png);
+                if (ConfigurationManager.AppSettings["url_logo"] != "")
+                {
+                    SaveImage(ConfigurationManager.AppSettings["url_logo"], "C:\\Users\\" + Environment.UserName + "\\logo_vinapp.png", ImageFormat.Png);
+                }                
             }
             
             
@@ -152,6 +155,7 @@ namespace VinappPrint
                 SaveImage(modelPrintFactura.UrlLogo, imagenLicencia, GetExtension(modelPrintFactura.UrlLogo));
             }
 
+            
 
             if (ConfigurationManager.AppSettings["url_logo"].ToString().Trim() != "") {
                 Image img = Image.FromFile("C:\\Users\\" + Environment.UserName + "\\logo_vinapp.png");
@@ -197,18 +201,27 @@ namespace VinappPrint
 
             e.Graphics.DrawString("Direccion: ", new Font(fontFamily, fontSize, fontStyle), Brushes.Black, new RectangleF(x, y + 170, width, height));
             e.Graphics.DrawString(modelPrintFactura.ClienteDireccion, new Font(fontFamily, fontSize), Brushes.Black, new RectangleF(x + 64, y + 170, width, height));
+
+            if (modelPrintFactura.ClienteBarrio != "No definido")
+            {
+                e.Graphics.DrawString("Barrio: ", new Font(fontFamily, fontSize, fontStyle), Brushes.Black, new RectangleF(x, y + 190, width, height));
+                e.Graphics.DrawString(modelPrintFactura.ClienteBarrio, new Font(fontFamily, fontSize), Brushes.Black, new RectangleF(x + 40, y + 190, width, height));
+                y += 30;
+            }
             if (modelPrintFactura.Mesa != "No definida")
             {
-                if (modelPrintFactura.Mesa != "Para llevar")
-                {
-                    e.Graphics.DrawString("Mesa: ", new Font(fontFamily, fontSize, fontStyle), Brushes.Black, new RectangleF(x, y + 190, width, height));
-                    e.Graphics.DrawString(modelPrintFactura.Mesa, new Font(fontFamily, fontSize), Brushes.Black, new RectangleF(x + 40, y + 190, width, height));
-                }
-                else
+                if (modelPrintFactura.Mesa == "Para llevar")
                 {
                     e.Graphics.DrawString("Pedido para llevar", new Font(fontFamily, fontSize, fontStyle), Brushes.Black, new RectangleF(x, y + 190, width, height));
                 }
-                
+                else if(modelPrintFactura.Mesa == "Para Recogerlo")
+                {
+                    e.Graphics.DrawString("Pedido para recogerlo", new Font(fontFamily, fontSize, fontStyle), Brushes.Black, new RectangleF(x, y + 190, width, height));
+                }
+                else
+                {
+                    e.Graphics.DrawString("Mesa: " + modelPrintFactura.Mesa, new Font(fontFamily, fontSize, fontStyle), Brushes.Black, new RectangleF(x, y + 190, width, height));
+                }
                 y += 30;
             }
             e.Graphics.DrawString("Descripción ", new Font(fontFamily, fontSize, fontStyle), Brushes.Black, new RectangleF(x, y + 200, width, height));
@@ -225,6 +238,15 @@ namespace VinappPrint
 
                 SizeF textSize = e.Graphics.MeasureString(item.Descripcion, new Font(fontFamily, fontSize)); y += textSize.Height + 12;
             }
+
+            if (modelPrintFactura.Observaciones != "")
+            {
+                e.Graphics.DrawString("Observaciones", new Font(fontFamily, fontSize, fontStyle), Brushes.Black, new RectangleF(x, y + 220, width, height));
+                e.Graphics.DrawString(modelPrintFactura.Observaciones, new Font(fontFamily, fontSize), Brushes.Black, new RectangleF(x, y + 235, width, height));
+                SizeF textSize = e.Graphics.MeasureString(modelPrintFactura.Observaciones, new Font(fontFamily, fontSize));
+                y += textSize.Height + 40;
+            }
+
             e.Graphics.DrawString("Subtotal: ", new Font(fontFamily, fontSize, fontStyle), Brushes.Black, new RectangleF(x - 80, y + 220, width, height), sf_right);
             e.Graphics.DrawString(modelPrintFactura.Subtotal, new Font(fontFamily, fontSize), Brushes.Black, new RectangleF(x, y + 220, width, height), sf_right);
             y += 20;

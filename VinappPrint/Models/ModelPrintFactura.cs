@@ -15,11 +15,13 @@ namespace VinappPrint
         public string Resolucion { get; set; }
         public string Telefono { get; set; }
         public string Direccion { get; set; }
+        
         public string NumFactura { get; set; }
         public string Fecha { get; set; }
         public string ClienteNombre { get; set; }
         public string ClienteTelefono { get; set; }
         public string ClienteDireccion { get; set; }
+        public string ClienteBarrio { get; set; }
         public string Mesa { get; set; }
         public string Domicilio { get; set; }
         public string Servicio { get; set; }
@@ -32,6 +34,7 @@ namespace VinappPrint
         public string Texto { get; set; } = "Esta factura de venta se asimila en sus efectos a la letra de cambio (ART. 621 Y 774 de C.C)";
         public string UrlLogo { get; set; }
         public string IdLicencia { get; set; }
+        public string Observaciones { get; set; }
     }
 
     public class DetalleFactura

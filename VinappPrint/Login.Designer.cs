@@ -35,8 +35,8 @@ namespace VinappPrint
             this.txtEmail = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtPassword = new Guna.UI2.WinForms.Guna2TextBox();
             this.btnLogin = new Guna.UI2.WinForms.Guna2Button();
-            this.loading = new Guna.UI2.WinForms.Guna2WinProgressIndicator();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
+            this.loading = new Guna.UI2.WinForms.Guna2WinProgressIndicator();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -147,16 +147,6 @@ namespace VinappPrint
             this.btnLogin.Text = "Iniciar Sesion";
             this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
             // 
-            // loading
-            // 
-            this.loading.CircleSize = 1F;
-            this.loading.Location = new System.Drawing.Point(151, 299);
-            this.loading.Name = "loading";
-            this.loading.ProgressColor = System.Drawing.Color.FromArgb(((int)(((byte)(95)))), ((int)(((byte)(232)))), ((int)(((byte)(202)))));
-            this.loading.Size = new System.Drawing.Size(62, 57);
-            this.loading.TabIndex = 18;
-            this.loading.Visible = false;
-            // 
             // pictureBox5
             // 
             this.pictureBox5.Anchor = System.Windows.Forms.AnchorStyles.Top;
@@ -167,6 +157,16 @@ namespace VinappPrint
             this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox5.TabIndex = 6;
             this.pictureBox5.TabStop = false;
+            // 
+            // loading
+            // 
+            this.loading.CircleSize = 1F;
+            this.loading.Location = new System.Drawing.Point(151, 299);
+            this.loading.Name = "loading";
+            this.loading.ProgressColor = System.Drawing.Color.FromArgb(((int)(((byte)(95)))), ((int)(((byte)(232)))), ((int)(((byte)(202)))));
+            this.loading.Size = new System.Drawing.Size(62, 57);
+            this.loading.TabIndex = 18;
+            this.loading.Visible = false;
             // 
             // Login
             // 

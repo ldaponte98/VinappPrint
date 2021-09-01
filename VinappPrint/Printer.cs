@@ -43,6 +43,7 @@ namespace VinappPrint
                 modelPrint.Nit = data.nit_business;
                 modelPrint.Ciudad = data.city_point;
                 modelPrint.Direccion = data.address_point;
+
                 modelPrint.Telefono = data.phone_point;
                 modelPrint.Resolucion = data.resolution;
                 modelPrint.NumFactura = data.document_number;
@@ -50,6 +51,7 @@ namespace VinappPrint
                 modelPrint.ClienteNombre = data.client_name;
                 modelPrint.ClienteTelefono = data.client_phone;
                 modelPrint.ClienteDireccion = data.client_address;
+                modelPrint.ClienteBarrio = data.client_neighborhood;
                 modelPrint.Mesa = data.table;
                 modelPrint.Domicilio = data.shipping;
                 modelPrint.PagaCon = data.pay_with;
@@ -63,7 +65,7 @@ namespace VinappPrint
                         Valor = item.value
                     });
                 }
-
+                modelPrint.Observaciones = data.commentary;
                 modelPrint.Subtotal = data.subtotal;
                 modelPrint.Descuento = data.total_discount;
                 modelPrint.Servicio = data.service;
