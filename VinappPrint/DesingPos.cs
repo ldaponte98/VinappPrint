@@ -235,8 +235,8 @@ namespace VinappPrint
                 e.Graphics.DrawString(item.Descripcion, new Font(fontFamily, fontSize), Brushes.Black, new RectangleF(x - x_detalles, y + 200, width/2, height));
                 e.Graphics.DrawString(item.Cantidad, new Font(fontFamily, fontSize), Brushes.Black, new RectangleF(x + 160 - x_detalles, y + 200, width, height));
                 e.Graphics.DrawString(item.Valor, new Font(fontFamily, fontSize), Brushes.Black, new RectangleF(x, y + 200, width, height), sf_right);
-
-                SizeF textSize = e.Graphics.MeasureString(item.Descripcion, new Font(fontFamily, fontSize)); y += textSize.Height + 12;
+                SizeF dimension = new SizeF(width / 2, height);
+                SizeF textSize = e.Graphics.MeasureString(item.Descripcion, new Font(fontFamily, fontSize), dimension); y += textSize.Height + 8;
             }
 
             if (modelPrintFactura.Observaciones != "")
@@ -407,6 +407,7 @@ namespace VinappPrint
 
 
         }
+        
         public void CutTicket()
         {
             string corte = "\x1B" + "m";                                    // caracteres de corte
@@ -428,7 +429,7 @@ namespace VinappPrint
             StringFormat sf = new StringFormat();
             sf.Alignment = StringAlignment.Center;
 
-            if (modelPrintComanda.Productos.Count >= 8)
+            if (modelPrintComanda.Productos.Count >= 6)
             {
                 fontSize -= 1;
             }
@@ -461,7 +462,8 @@ namespace VinappPrint
                 e.Graphics.DrawString(item.Observaciones, new Font(fontFamily, fontSize), Brushes.Black, new RectangleF(x + 160, y + 70, width / 2, height));
 
                 string textBig = item.Nombre.Length > item.Observaciones.Length ? item.Nombre : item.Observaciones;
-                SizeF textSize = e.Graphics.MeasureString(textBig, new Font(fontFamily, fontSize)); y += textSize.Height + 35;
+                SizeF dimension = item.Nombre.Length > item.Observaciones.Length ? new SizeF(width / 3, height) : new SizeF(width / 2, height);
+                SizeF textSize = e.Graphics.MeasureString(textBig, new Font(fontFamily, fontSize), dimension); y += textSize.Height + 10;
             }
 
             e.Graphics.DrawString("Observaciones adicionales", new Font(fontFamily, fontSize, fontStyle), Brushes.Black, new RectangleF(x, y + 100, width, height));

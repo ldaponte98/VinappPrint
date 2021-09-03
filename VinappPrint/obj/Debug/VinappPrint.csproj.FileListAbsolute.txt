@@ -77,3 +77,4 @@ D:\PC CLEZ\DATOS\VinappPrint\VinappPrint\obj\Debug\VinappPrint.exe
 D:\PC CLEZ\DATOS\VinappPrint\VinappPrint\obj\Debug\VinappPrint.pdb
 D:\PC CLEZ\DATOS\VinappPrint\VinappPrint\obj\Debug\VinappPrint.Settings.resources
 D:\PC CLEZ\DATOS\VinappPrint\VinappPrint\obj\Debug\VinappPrint.TypeDriversPrinter.resources
+D:\PC CLEZ\DATOS\VinappPrint\VinappPrint\obj\Debug\VinappPrint.csproj.AssemblyReference.cache
