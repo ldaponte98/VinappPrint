@@ -94,7 +94,7 @@ namespace VinappPrint
             if (LocalStorage.Get("tipo_papel") == "Pequeño") pos = 1;
             comboTypePaper.SelectedIndex = pos;
 
-            txtSpaceLeftDetails.Text = LocalStorage.Get("espaciado_x");
+            txtRouteCache.Text = LocalStorage.Get("carpeta_usuario");
             txtSpaceTopLogo.Text = LocalStorage.Get("espaciado_logo");
             txtSpaceLeftLogo.Text = LocalStorage.Get("x_logo");
             txtSpaceResolution.Text = LocalStorage.Get("espaciado_resolucion");
@@ -120,7 +120,7 @@ namespace VinappPrint
             LocalStorage.Save("impresoras_comanda", comboPrintersComand.Text);
             LocalStorage.Save("impresoras_facturacion_mesa", comboPrintersInvoice.Text);
             LocalStorage.Save("impresoras_facturacion_domicilio", comboPrintersInvoice.Text);
-
+            
             if (comboPrintersValids.Text == "Facturas y comandas")
             {
                 LocalStorage.Save("permite_facturacion", "true");
@@ -151,7 +151,8 @@ namespace VinappPrint
             LocalStorage.Save("tipo_papel", comboTypePaper.Text);
             LocalStorage.Save("tama_fuente", int.Parse(txtSizeFont.Text) - 12);
             LocalStorage.Save("ancho", txtWeightPaper.Text);
-            LocalStorage.Save("espaciado_x", txtSpaceLeftDetails.Text);
+            LocalStorage.Save("espaciado_x", 0);
+            LocalStorage.Save("carpeta_usuario", txtRouteCache.Text);
             LocalStorage.Save("espaciado_logo", txtSpaceTopLogo.Text);
             LocalStorage.Save("x_logo", txtSpaceLeftLogo.Text);
             LocalStorage.Save("espaciado_resolucion", txtSpaceResolution.Text);

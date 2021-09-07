@@ -31,6 +31,8 @@ namespace VinappPrint
         {
             this.btnLogin = new Guna.UI2.WinForms.Guna2Button();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.txtLogo = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2HtmlLabel3 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.txtCompany = new Guna.UI2.WinForms.Guna2TextBox();
@@ -40,7 +42,7 @@ namespace VinappPrint
             this.txtSpaceTopLogo = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2HtmlLabel4 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
-            this.txtSpaceLeftDetails = new Guna.UI2.WinForms.Guna2TextBox();
+            this.txtRouteCache = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2HtmlLabel15 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2HtmlLabel14 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.comboTypePaper = new Guna.UI2.WinForms.Guna2ComboBox();
@@ -66,13 +68,11 @@ namespace VinappPrint
             this.loading = new Guna.UI2.WinForms.Guna2WinProgressIndicator();
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
-            this.guna2Panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.guna2Panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             this.SuspendLayout();
             // 
             // btnLogin
@@ -105,6 +105,32 @@ namespace VinappPrint
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(999, 34);
             this.panel1.TabIndex = 16;
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureBox3.Dock = System.Windows.Forms.DockStyle.Right;
+            this.pictureBox3.Image = global::VinappPrint.Properties.Resources.Minimize_Icon;
+            this.pictureBox3.Location = new System.Drawing.Point(904, 0);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(46, 34);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pictureBox3.TabIndex = 2;
+            this.pictureBox3.TabStop = false;
+            this.pictureBox3.Click += new System.EventHandler(this.pictureBox3_Click);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Right;
+            this.pictureBox1.Image = global::VinappPrint.Properties.Resources.Close_Icon;
+            this.pictureBox1.Location = new System.Drawing.Point(950, 0);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(49, 34);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // txtLogo
             // 
@@ -253,7 +279,7 @@ namespace VinappPrint
             // 
             this.guna2Panel1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.guna2Panel1.AutoScroll = true;
-            this.guna2Panel1.Controls.Add(this.txtSpaceLeftDetails);
+            this.guna2Panel1.Controls.Add(this.txtRouteCache);
             this.guna2Panel1.Controls.Add(this.guna2HtmlLabel15);
             this.guna2Panel1.Controls.Add(this.guna2HtmlLabel14);
             this.guna2Panel1.Controls.Add(this.comboTypePaper);
@@ -289,30 +315,30 @@ namespace VinappPrint
             this.guna2Panel1.Size = new System.Drawing.Size(997, 430);
             this.guna2Panel1.TabIndex = 34;
             // 
-            // txtSpaceLeftDetails
+            // txtRouteCache
             // 
-            this.txtSpaceLeftDetails.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.txtSpaceLeftDetails.BackColor = System.Drawing.Color.Transparent;
-            this.txtSpaceLeftDetails.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtSpaceLeftDetails.DefaultText = "";
-            this.txtSpaceLeftDetails.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtSpaceLeftDetails.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtSpaceLeftDetails.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtSpaceLeftDetails.DisabledState.Parent = this.txtSpaceLeftDetails;
-            this.txtSpaceLeftDetails.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtSpaceLeftDetails.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtSpaceLeftDetails.FocusedState.Parent = this.txtSpaceLeftDetails;
-            this.txtSpaceLeftDetails.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.txtSpaceLeftDetails.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtSpaceLeftDetails.HoverState.Parent = this.txtSpaceLeftDetails;
-            this.txtSpaceLeftDetails.Location = new System.Drawing.Point(669, 287);
-            this.txtSpaceLeftDetails.Name = "txtSpaceLeftDetails";
-            this.txtSpaceLeftDetails.PasswordChar = '\0';
-            this.txtSpaceLeftDetails.PlaceholderText = "";
-            this.txtSpaceLeftDetails.SelectedText = "";
-            this.txtSpaceLeftDetails.ShadowDecoration.Parent = this.txtSpaceLeftDetails;
-            this.txtSpaceLeftDetails.Size = new System.Drawing.Size(305, 36);
-            this.txtSpaceLeftDetails.TabIndex = 54;
+            this.txtRouteCache.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.txtRouteCache.BackColor = System.Drawing.Color.Transparent;
+            this.txtRouteCache.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtRouteCache.DefaultText = "";
+            this.txtRouteCache.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtRouteCache.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtRouteCache.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtRouteCache.DisabledState.Parent = this.txtRouteCache;
+            this.txtRouteCache.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtRouteCache.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtRouteCache.FocusedState.Parent = this.txtRouteCache;
+            this.txtRouteCache.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txtRouteCache.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtRouteCache.HoverState.Parent = this.txtRouteCache;
+            this.txtRouteCache.Location = new System.Drawing.Point(669, 287);
+            this.txtRouteCache.Name = "txtRouteCache";
+            this.txtRouteCache.PasswordChar = '\0';
+            this.txtRouteCache.PlaceholderText = "";
+            this.txtRouteCache.SelectedText = "";
+            this.txtRouteCache.ShadowDecoration.Parent = this.txtRouteCache;
+            this.txtRouteCache.Size = new System.Drawing.Size(305, 36);
+            this.txtRouteCache.TabIndex = 54;
             // 
             // guna2HtmlLabel15
             // 
@@ -322,9 +348,9 @@ namespace VinappPrint
             this.guna2HtmlLabel15.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(95)))), ((int)(((byte)(232)))), ((int)(((byte)(202)))));
             this.guna2HtmlLabel15.Location = new System.Drawing.Point(669, 266);
             this.guna2HtmlLabel15.Name = "guna2HtmlLabel15";
-            this.guna2HtmlLabel15.Size = new System.Drawing.Size(208, 19);
+            this.guna2HtmlLabel15.Size = new System.Drawing.Size(100, 19);
             this.guna2HtmlLabel15.TabIndex = 55;
-            this.guna2HtmlLabel15.Text = "Espaciado izquierda para detalles";
+            this.guna2HtmlLabel15.Text = "Ruta para cache";
             // 
             // guna2HtmlLabel14
             // 
@@ -724,32 +750,6 @@ namespace VinappPrint
             this.pictureBox5.TabIndex = 17;
             this.pictureBox5.TabStop = false;
             // 
-            // pictureBox3
-            // 
-            this.pictureBox3.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBox3.Dock = System.Windows.Forms.DockStyle.Right;
-            this.pictureBox3.Image = global::VinappPrint.Properties.Resources.Minimize_Icon;
-            this.pictureBox3.Location = new System.Drawing.Point(904, 0);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(46, 34);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.pictureBox3.TabIndex = 2;
-            this.pictureBox3.TabStop = false;
-            this.pictureBox3.Click += new System.EventHandler(this.pictureBox3_Click);
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Right;
-            this.pictureBox1.Image = global::VinappPrint.Properties.Resources.Close_Icon;
-            this.pictureBox1.Location = new System.Drawing.Point(950, 0);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(49, 34);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
-            // 
             // Settings
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -769,11 +769,11 @@ namespace VinappPrint
             this.Text = "Settings";
             this.Load += new System.EventHandler(this.Settings_Load);
             this.panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.guna2Panel1.ResumeLayout(false);
             this.guna2Panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -815,7 +815,7 @@ namespace VinappPrint
         private Guna.UI2.WinForms.Guna2TextBox txtSizeFont;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel14;
         private Guna.UI2.WinForms.Guna2ComboBox comboTypePaper;
-        private Guna.UI2.WinForms.Guna2TextBox txtSpaceLeftDetails;
+        private Guna.UI2.WinForms.Guna2TextBox txtRouteCache;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel15;
         private Guna.UI2.WinForms.Guna2CheckBox checkPrinterDrivers;
         private Guna.UI2.WinForms.Guna2WinProgressIndicator loading;

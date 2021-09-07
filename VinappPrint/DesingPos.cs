@@ -22,7 +22,7 @@ namespace VinappPrint
         public ModelPrintComanda modelPrintComanda;
         public string impresora = null;
         public string tipo = "factura"; //factura - comanda
-
+        public string carpetaUsuario = "";
         public DesingPos(string tipo)
         {
             this.tipo = tipo;
@@ -41,18 +41,31 @@ namespace VinappPrint
         public void Configurations()
         {
             printDocument = new PrintDocument();
+            if (ConfigurationManager.AppSettings["carpeta_usuario"] == "")
+            {
+                carpetaUsuario = "C:\\Users\\" + Environment.UserName;
+            }
+            else
+            {
+                carpetaUsuario = ConfigurationManager.AppSettings["carpeta_usuario"];
+            }
+
+            if (!Directory.Exists(carpetaUsuario))
+            {
+                Directory.CreateDirectory(carpetaUsuario);
+            }
 
             StandardPrintController spc = new StandardPrintController();
             printDocument.PrintController = spc; // This hides popup
             var paperSize = new PaperSize("A4", 1000, 10000);
             PrinterSettings ps = new PrinterSettings();
             if (impresora != null && impresora.Trim() != "") ps.PrinterName = impresora;
-            string imagen = "C:\\Users\\" + Environment.UserName + "\\logo_vinapp.png";
+            string imagen = carpetaUsuario + "\\logo_vinapp.png";
             if (!File.Exists(imagen))
             {
                 if (ConfigurationManager.AppSettings["url_logo"] != "")
                 {
-                    SaveImage(ConfigurationManager.AppSettings["url_logo"], "C:\\Users\\" + Environment.UserName + "\\logo_vinapp.png", ImageFormat.Png);
+                    SaveImage(ConfigurationManager.AppSettings["url_logo"], carpetaUsuario + "\\logo_vinapp.png", ImageFormat.Png);
                 }                
             }
             
@@ -149,7 +162,7 @@ namespace VinappPrint
             string extension = modelPrintFactura.UrlLogo.Split('.')[modelPrintFactura.UrlLogo.Split('.').Count() - 1];
             string nombre_archivo = "imagen_vinapp_" + modelPrintFactura.IdLicencia + "." + extension;
 
-            string imagenLicencia = "C:\\Users\\" + Environment.UserName + "\\"+ nombre_archivo;
+            string imagenLicencia = carpetaUsuario + "\\"+ nombre_archivo;
             if (!File.Exists(imagenLicencia))
             {
                 SaveImage(modelPrintFactura.UrlLogo, imagenLicencia, GetExtension(modelPrintFactura.UrlLogo));
@@ -158,7 +171,7 @@ namespace VinappPrint
             
 
             if (ConfigurationManager.AppSettings["url_logo"].ToString().Trim() != "") {
-                Image img = Image.FromFile("C:\\Users\\" + Environment.UserName + "\\logo_vinapp.png");
+                Image img = Image.FromFile(carpetaUsuario + "\\logo_vinapp.png");
                 e.Graphics.DrawImage(img, new Point(int.Parse(ConfigurationManager.AppSettings["x_logo"]), 0));
             }
             else
@@ -306,7 +319,7 @@ namespace VinappPrint
             bool negrita = ConfigurationManager.AppSettings["letra_negrita"] == "true" ? true : false;
             int x_detalles = int.Parse(ConfigurationManager.AppSettings["x_menos_detalles"]);
 
-            Image img = Image.FromFile("C:\\Users\\" + Environment.UserName + "\\logo_vinapp.png");
+            Image img = Image.FromFile(carpetaUsuario + "\\logo_vinapp.png");
             int y = 150 + int.Parse(ConfigurationManager.AppSettings["espaciado_logo"]);
             int x = int.Parse(ConfigurationManager.AppSettings["espaciado_x"]);
             StringFormat center = new StringFormat();
@@ -546,7 +559,7 @@ namespace VinappPrint
             bool negrita = ConfigurationManager.AppSettings["letra_negrita"] == "true" ? true : false;
             int x_detalles = int.Parse(ConfigurationManager.AppSettings["x_menos_detalles"]);
 
-            Image img = Image.FromFile("C:\\Users\\" + Environment.UserName + "\\logo_vinapp.png");
+            Image img = Image.FromFile(carpetaUsuario + "\\logo_vinapp.png");
             int y = 150 + int.Parse(ConfigurationManager.AppSettings["espaciado_logo"]);
             int x = int.Parse(ConfigurationManager.AppSettings["espaciado_x"]);
             StringFormat center = new StringFormat();
@@ -645,7 +658,7 @@ namespace VinappPrint
             bool negrita = ConfigurationManager.AppSettings["letra_negrita"] == "true" ? true : false;
             int x_detalles = int.Parse(ConfigurationManager.AppSettings["x_menos_detalles"]);
 
-            Image img = Image.FromFile("C:\\Users\\" + Environment.UserName + "\\logo_vinapp.png");
+            Image img = Image.FromFile(carpetaUsuario + "\\logo_vinapp.png");
             int y = 150 + int.Parse(ConfigurationManager.AppSettings["espaciado_logo"]);
             int x = int.Parse(ConfigurationManager.AppSettings["espaciado_x"]);
             StringFormat center = new StringFormat();
