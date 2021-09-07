@@ -11,6 +11,7 @@ using System.Runtime.InteropServices;
 using System.IO;
 using System.Drawing.Imaging;
 using System.Net;
+using System.Configuration;
 
 namespace VinappPrint
 {
@@ -83,7 +84,19 @@ namespace VinappPrint
 
         public static void ShowNotification(string message, string title = "Vinapp Print")
         {
-            string icono = "C:\\Users\\" + Environment.UserName + "\\vinapp.ico";
+            string icono = "C:\\Users\\" + Environment.UserName;
+            if (ConfigurationManager.AppSettings["carpeta_usuario"] != "")
+            {
+                icono = ConfigurationManager.AppSettings["carpeta_usuario"];
+            }
+
+            if (!Directory.Exists(icono))
+            {
+                Directory.CreateDirectory(icono);
+            }
+            icono += "\\vinapp.ico";
+
+
             if (!File.Exists(icono))
             {
                 WebClient myWebClient = new WebClient();
